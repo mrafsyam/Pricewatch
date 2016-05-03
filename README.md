@@ -1,7 +1,7 @@
 # PriceWatch
 
 <p align="center">
-  <img src="https://github.com/mrafsyam/Pricewatch/app/images/logo.png?raw=true" width="200"/>
+  <img src="https://raw.githubusercontent.com/mrafsyam/Pricewatch/master/app/images/logo.png?raw=true" width="200"/>
 </p>
 
 #### Description  
