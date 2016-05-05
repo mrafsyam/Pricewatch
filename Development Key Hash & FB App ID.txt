@@ -1,0 +1,10 @@
+This command will generate a 28-character key hash unique to your development environment. Copy and paste it into the field below. You will need to provide a development key hash for the development environment of each person who works on your app.
+
+Run in command
+keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | openssl sha1 -binary | openssl base64
+
+Created for Raf : Pz8oP2kJPz9ZPz8/Px1teB9qPxYNCg==
+Use (28 char) : Pz8oP2kJPz9ZPz8/Px1teB9qPx==
+
+FB Application ID :
+507422312779201
