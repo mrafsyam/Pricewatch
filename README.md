@@ -34,6 +34,8 @@ Get the best price for all your groceries need
   - Supermarket with less total cost is displayed - done by totalling all item cost. 
   - Ability to copy the list into clipboard and Shared via Social Media
   - Requires online database - table MST_ITEM (structure is to be decide)
+
+
 #### TO DO (After first working version is completed) 
 * 
  
