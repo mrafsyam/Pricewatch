@@ -11,15 +11,28 @@ Get the best price for all your groceries need
 * 
 
 #### Current Progress
-* Basic login screen
+* Basic Sign in with FB
 
 #### TO DO (First working version)
-* Signup and login screen (optional FB login)
-* Prompt user for "home" locatione using GPS and list down suggestion) and save to Shared Preference
-* List grocery items' category - category will expand into individual item list which include image, name, "tick" button and "go" button
-* Prompt user with list of nearby Supermarket for selection and "compare" button
-* Prompt user with result : list of "previously selected" item and list of comparison price for every "previously selected" Supermarket. Best price is highlighted for each item (row) & Best total cost is highlighted for the relevant Supermarket (collumn)
-   
+* Module 1 : Login screen + Sign up (optional Sign Up via FB)
+  - Requires database - table MST_USER ("email", "password", "FB_id") etc
+  
+* Module 2 : Location 
+  - Prompt user for "home" locatione using GPS and list down suggestion) and save to Shared Preference
+  - Google Play services location APIs are preferred over the Android framework location APIs (android.location)
+
+* Module 3 : Grocery Listing & Selection
+  - List grocery items' category - category will expand into individual item list 
+  - Each item has include image, name, "tick" button
+  - A go button will proceed to Module 4
+
+* Module 4 : Result aka Price Comparison
+  - Prompt user with list of nearby Supermarket as collumns and list of "previously selected" item as rows 
+  - Each collumn displays price for every "previously selected" Supermarket. 
+  - Best price is highlighted for each item (i.e. Supermarket A may have best price for item A and thus highlighted. Supermarket B may have best price for item B and thus highlighted)
+  - Supermarket with less total cost is displayed - done by totalling all item cost. 
+  - Ability to copy the list into clipboard and Shared via Social Media
+  
 #### TO DO (After first working version is completed) 
 * 
  
