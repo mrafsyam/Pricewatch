@@ -56,9 +56,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.e(TAG, "Database not found");
         }
 
-        if (db != null) {
-            Log.e(TAG, "Check database is null : " + (db == null));
-        }
+        //debug
+        Log.e(TAG, "Check database is null : " + (db == null));
+
+        //return true if db existed and valid
         return db != null ? true : false;
     }
 

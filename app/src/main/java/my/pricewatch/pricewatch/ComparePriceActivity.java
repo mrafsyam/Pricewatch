@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+import my.pricewatch.pricewatch.Utils;
+import java.util.ArrayList;
 
 public class ComparePriceActivity extends AppCompatActivity {
 
@@ -23,7 +25,10 @@ public class ComparePriceActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     private Cursor c;
     private static final String SELECT_SQL = "SELECT * FROM RESULT_CPRICE";
+    private String WHERE_COND_ITEMID = " WHERE item_id IN ";
     private DatabaseHelper dbHelper;
+    ArrayList<String> ItemList = null; //contains list of selected item_id
+    String ItemListStr =  null;
 
 
     @Override
@@ -31,11 +36,25 @@ public class ComparePriceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare_price);
 
-        //get database & table
+        if (getIntent().getExtras() != null) {
+            //get list of selected item_id
+            ItemList = getIntent().getExtras().getStringArrayList("ItemList");
+
+            //get SQL format list of selected item_id
+            ItemListStr = Utils.getListForSQL(ItemList);
+
+            //build query on the selected item_id
+            WHERE_COND_ITEMID += ItemListStr;
+        }
+
+        //get database & extract data from table
         openDatabase();
 
         try {
-            c = db.rawQuery(SELECT_SQL, null);
+
+            //query for items info
+            Log.e(TAG,"Query : " + SELECT_SQL + WHERE_COND_ITEMID);
+            c = db.rawQuery(SELECT_SQL + WHERE_COND_ITEMID, null);
 
             //assign UI elements
             txt11 = (TextView) findViewById(R.id.textView11);
@@ -62,11 +81,9 @@ public class ComparePriceActivity extends AppCompatActivity {
     */
     protected void openDatabase() {
         try {
-
             dbHelper = new DatabaseHelper(this);
             dbHelper.createDatabase();
             db = dbHelper.getDB();
-            Log.e(TAG, "Check database is null : " + (db == null));
         } catch (SQLiteException e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -84,5 +101,4 @@ public class ComparePriceActivity extends AppCompatActivity {
         if (!c.isLast())
             c.moveToNext();
     }
-
 }
