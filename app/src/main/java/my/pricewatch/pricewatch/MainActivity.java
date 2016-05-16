@@ -30,16 +30,25 @@ public class MainActivity extends AppCompatActivity {
         ItemList.add("002");
         ItemList.add("003");
         //ItemList.add("004");
+        //
 
 
         btnGoCompare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                /*
                 //create new Intent and send out list of item_id
                 Intent intent = new Intent(MainActivity.this, ComparePriceActivity.class);
                 intent.putStringArrayListExtra("ItemList", (ArrayList<String>) ItemList);
                 startActivity(intent);
+                */
+
+                //create new Intent and send out list of item_id
+                Intent intent = new Intent(MainActivity.this, ItemListActivity.class);
+                intent.putStringArrayListExtra("ItemList", (ArrayList<String>) ItemList);
+                startActivity(intent);
+
             }
         });
 
