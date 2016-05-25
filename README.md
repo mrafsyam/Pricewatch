@@ -7,6 +7,8 @@
 #### Description  
 Get the best price for all your groceries need
 
+A mobile application where user can compare price of grocery items of nearby hypermarkets and be suggested with the ones with best value. Planned features include social interaction, trackable price reporting and delivery system.
+
 #### Screenshot (App)
 <p align="center">
   <img src="https://github.com/mrafsyam/Pricewatch/blob/master/app/images/wireframe1.png?raw=true" width="650"/>
