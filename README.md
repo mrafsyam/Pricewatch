@@ -8,10 +8,11 @@
 Get the best price for all your groceries need
 
 #### Screenshot (App)
-* 
+<p align="center">
+  <img src="https://github.com/mrafsyam/Pricewatch/blob/master/app/images/wireframe1.png?raw=true" width="250"/>
+  <img src="https://github.com/mrafsyam/Pricewatch/blob/master/app/images/wireframe2.png?raw=true" width="250"/>
+</p>
 
-#### Current Progress
-* Basic Sign in with FB
 
 #### TO DO (First working version)
 * Module 1 : Login screen + Sign up (optional Sign Up via FB)
