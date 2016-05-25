@@ -14,7 +14,7 @@ Get the best price for all your groceries need
 </p>
 
 
-#### TO DO (First working version)
+#### // TO DO 
 * Module 1 : Login screen + Sign up (optional Sign Up via FB)
   - Requires online database - table MST_USER ("email", "password", "FB_id") etc
   
@@ -36,8 +36,4 @@ Get the best price for all your groceries need
   - Ability to copy the list into clipboard and Shared via Social Media
   - Requires online database - table MST_ITEM (structure is to be decide)
 
-
-#### TO DO (After first working version is completed) 
-* 
- 
 
